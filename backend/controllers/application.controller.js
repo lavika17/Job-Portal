@@ -4,6 +4,8 @@ export const applyJob = async(req , res)=>{
     try {
         const userId = req.id;
         const jobId = req.params.id;
+        
+
         if(!jobId){
             return res.status(400).json({
                 message:"job id is required.",
@@ -23,7 +25,7 @@ export const applyJob = async(req , res)=>{
         if(!job){
             return res.status(404).json({
                 message:"Job not found",
-                success:true
+                success:false
             })
         }
         
