@@ -19,7 +19,7 @@ const JobHuntSection = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const searchJobHandler=()=>{
+    const searchJobHandler=(query)=>{
         dispatch(setSearchedQuery(query));
         navigate("/browse");
     }
